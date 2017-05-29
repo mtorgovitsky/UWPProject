@@ -9,16 +9,17 @@
     mc:Ignorable="d">
     
     <Page.Resources>
-        <localViewModel:ViewModel x:Name="Photos"/>
+        <localViewModel:ViewModel x:Name="VM"/>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <StackPanel VerticalAlignment="Center">
             <Button Content="Home Page Button" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <ListBox>
+            <ListBox ItemsSource="{x:Bind VM.Photos}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
