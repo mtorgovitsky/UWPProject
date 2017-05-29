@@ -18,8 +18,10 @@
             <Button Content="Home Page Button" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <ListBox ItemsSource="{x:Bind VM.Photos}">
                 <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        
+                    <DataTemplate x:DataType="localViewModel:Photo">
+                        <Grid Height="100" Width="100" Margin="10">
+                            <Image Source="{x:Bind Path}" />
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
